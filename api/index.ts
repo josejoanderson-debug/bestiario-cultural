@@ -1,10 +1,9 @@
 import type { Request, Response } from "express";
-import { app } from "../server/app";
+import { app } from "../server/app.ts";
 
 /**
- * Entrada da Vercel Serverless Function.
- * A aplicação Express atende o tRPC em /api/trpc.
- * A função não chama app.listen(): a Vercel fornece o servidor HTTP.
+ * Vercel Serverless Function entry point.
+ * Express mounts the tRPC router at /api/trpc.
  */
 export default function handler(req: Request, res: Response) {
   return app(req, res);

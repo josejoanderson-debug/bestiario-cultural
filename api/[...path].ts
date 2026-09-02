@@ -1,9 +1,9 @@
 import type { Request, Response } from "express";
-import { app } from "../server/app";
+import { app } from "../server/app.ts";
 
 /**
- * Entrada catch-all da Vercel para a API Express/tRPC.
- * A função não chama app.listen(): a Vercel fornece o servidor HTTP.
+ * Catch-all Vercel Function for the Express/tRPC API.
+ * This preserves the original /api/trpc/... request path.
  */
 export default function handler(req: Request, res: Response) {
   return app(req, res);

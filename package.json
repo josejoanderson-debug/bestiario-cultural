@@ -1,13 +1,13 @@
 {
   "name": "bestiario-cultural",
   "version": "1.0.0",
+  "description": "Bestiário Cultural - Plataforma de registro e pesquisa da cultura popular brasileira",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-    "build": "vite build && esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js",
+    "build": "vite build",
     "start": "NODE_ENV=production node dist/index.js",
-    "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
     "test": "vitest run",
@@ -38,6 +38,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toast": "^1.2.15",
     "@radix-ui/react-toggle": "^1.1.10",
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
@@ -69,7 +70,7 @@
     "recharts": "^2.15.2",
     "sonner": "^2.0.7",
     "streamdown": "^1.4.0",
-    "superjson": "^1.13.3",
+    "superjson": "^1.13.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
@@ -99,7 +100,6 @@
     "vitest": "^2.1.4"
   },
   "engines": {
-    "node": "24.x"
-  },
-  "packageManager": "npm@10.8.2"
+    "node": "20.x"
+  }
 }
